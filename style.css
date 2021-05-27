@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fnt-body-text: 'Kumbh Sans', sans-serif;
+  --spacer: 1em;
+  --clr-light-grey: #e8e8ea;
+  --clr-mid-grey: #787887;
+  --clr-dark-grey: #4b4c5f;
+  --clr-black: #1e1f36;
+}
+
+body {
+  font-family: var(--fnt-body-text);
+  display: grid;
+  place-items: center;
+  font-size: 0.812rem;
+  color: var(--clr-black);
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, #b068e9 0%, #6463e7 100%);
+  margin-top: 7rem;
+}
+
+h1 {
+  text-align: center;
+  margin-top: calc(var(--spacer) * 3);
+  margin-bottom: var(--spacer);
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+img {
+  margin-left: -0.8rem;
+  display: block;
+  max-width: 100%;
+}
+
+img::before {
+  background-image: url(./images/bg-pattern-mobile.svg);
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: -7.5rem;
+}
+
+img::before {
+  background-image: url(./images/bg-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.flow > * + * {
+  margin-top: var(--spacer);
+}
+
+.flow\:small > * + * {
+  margin-top: calc(var(--spacer) / 2);
+}
+
+.faq-container {
+  background: #ffffff;
+  box-shadow: 0px 50px 50px -20px rgba(53, 18, 122, 0.497159);
+  border-radius: 23px;
+  padding: var(--spacer);
+  margin: var(--spacer);
+}
+
+.faq {
+  border-bottom: 1px solid var(--clr-light-grey);
+  margin: var(--spacer);
+}
+
+.faq-text {
+  font-weight: 300;
+  color: var(--clr-mid-grey);
+  margin-bottom: var(--spacer);
+}
+
+.faq.active h3 {
+  font-weight: bold;
+}
+
+.faq h3 {
+  color: var(--clr-dark-grey);
+  font-weight: normal;
+  margin-bottom: calc(var(--spacer) / 2);
+}
