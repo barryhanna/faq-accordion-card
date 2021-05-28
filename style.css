@@ -17,7 +17,7 @@
   --clr-dark-grey: #4b4c5f;
   --clr-black: #1e1f36;
 
-  --measure: 50ch;
+  --measure: 40ch;
 }
 
 body {
@@ -50,7 +50,7 @@ button {
   cursor: pointer;
 }
 
-p {
+p.faq-text {
   max-width: var(--measure);
 }
 
@@ -142,4 +142,21 @@ img::before {
 
 .flow\:small > * + * {
   margin-top: calc(var(--spacer) / 2);
+}
+
+@media (min-width: 800px) {
+  .faq-container {
+    display: flex;
+  }
+
+  .img-container {
+    width: 472px;
+    height: 359px;
+    margin-left: -4rem;
+    margin-top: 15%;
+  }
+
+  .img-container::after {
+    background-image: url('./images/illustration-box-desktop.svg');
+  }
 }
