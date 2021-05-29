@@ -133,14 +133,28 @@ button {
 @media (min-width: 800px) {
   .faq-container {
     display: flex;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  .faqs {
+    margin-left: calc(var(--spacer) * 4);
+    margin-right: calc(var(--spacer) * 2);
+  }
+
+  h1 {
+    margin-left: calc(var(--spacer) / 2);
+    text-align: initial;
   }
 
   .bg-container {
-    background-image: url('./images/illustration-woman-online-desktop.svg'),
-      url('./images/bg-pattern-mobile.svg'),
-      url('./images/illustration-box-desktop.svg');
-    background-size: 223px 183px, 10%, auto;
+    width: 472px;
+    height: 359px;
+    background-image: url('./images/bg-pattern-desktop.svg'),
+      url('./images/illustration-box-desktop.svg'),
+      url('./images/illustration-woman-online-desktop.svg');
+    background-size: 100%, 40% 40%, 100%;
     margin-left: -4rem;
-    margin-top: 15%;
+    background-position: center center, left bottom, bottom center;
   }
 }
