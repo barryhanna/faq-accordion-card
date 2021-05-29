@@ -17,7 +17,7 @@
   --clr-dark-grey: #4b4c5f;
   --clr-black: #1e1f36;
 
-  --measure: 40ch;
+  --measure: 36ch;
 }
 
 body {
@@ -50,7 +50,7 @@ button {
   cursor: pointer;
 }
 
-p.faq-text {
+.faq.active p {
   max-width: var(--measure);
 }
 
@@ -66,7 +66,7 @@ p.faq-text {
     url('./images/illustration-woman-online-mobile.svg');
   background-size: 55%, 60%;
   background-repeat: no-repeat;
-  background-position: bottom center, top center;
+  background-position: 55% 90%, top center;
 }
 
 .faq-container {
@@ -90,24 +90,13 @@ p.faq-text {
   justify-content: space-between;
 }
 
-.faq.active .faq-text {
-  display: block;
-}
-
 .faq-text {
+  display: none;
   font-weight: 300;
   color: var(--clr-mid-grey);
   margin-bottom: var(--spacer);
-}
-
-.faq-text {
-  display: none;
   max-width: var(--measure);
   line-height: 1.6;
-}
-
-.faq.active h3 {
-  font-weight: bold;
 }
 
 .faq h3 {
@@ -123,6 +112,14 @@ p.faq-text {
 .faq h3:hover,
 .faq h3:active {
   color: hsl(14, 88%, 65%);
+}
+
+.faq.active h3 {
+  font-weight: bold;
+}
+
+.faq.active .faq-text {
+  display: block;
 }
 
 .flow > * + * {
